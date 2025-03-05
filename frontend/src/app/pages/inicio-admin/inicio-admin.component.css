@@ -1,0 +1,25 @@
+.grafico-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+  
+.grafico {
+    margin: 20px 0;
+}
+
+.grafico h3 {
+    margin-top: 10px;
+}
+
+mat-card {
+    padding: 20px;
+    width: 80%;
+    max-width: 1024px;
+}
+
+mat-card-header {
+    background-color: whitesmoke;
+}
+  

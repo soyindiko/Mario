@@ -1,0 +1,65 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100%;
+    background-image: url("../../../assets/images/teatro.png");
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.login-box {
+    background-color: #003366;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    text-align: center;
+    color: white;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.forgot-password {
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.login-btn {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.register-btn {
+    background-color: #008cba;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}

@@ -1,0 +1,9 @@
+<div class="tarjeta">
+    <img [src]="pelicula.url_portada || 'assets/images/JPG000tu.jpg'" draggable="false">
+    <div class="info">
+        <p>{{pelicula.titulo}}</p>
+        <a (click)="verDetalles(pelicula)"><button class="ver-mas">Ver más</button></a>
+    </div>
+</div>
+
+

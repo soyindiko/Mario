@@ -1,0 +1,38 @@
+<div class="contenedor-detalles">
+    <div class="productos">
+        <h2>Selecciona complementos</h2>
+        
+        <div class="categoria">
+            <h3>Bebida</h3>
+            <div class="productos-grid">
+                <div *ngFor="let bebida of bebidas" class="producto">
+                    <img [src]="bebida.url_imagen || 'assets/images/logo.png'" [alt]="bebida.nombre">
+                    <p>{{ bebida.nombre }} - {{ bebida.precio | currency }}</p>
+                    <button (click)="agregarAlPedido(bebida)">Agregar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="categoria">
+            <h3>Comida</h3>
+            <div class="productos-grid">
+                <div *ngFor="let palomita of palomitas" class="producto">
+                    <img [src]="palomita.url_imagen || 'assets/images/logo.png'" [alt]="palomita.nombre">
+                    <p>{{ palomita.nombre }} - {{ palomita.precio | currency }}</p>
+                    <button (click)="agregarAlPedido(palomita)">Agregar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="resumen-pedido">
+        <h2>Resumen de compra</h2>
+        <ul>
+            <li *ngFor="let item of carrito">
+                {{ item.nombre }} - {{ item.precio | currency }}
+            </li>
+        </ul>
+        <h3>Total: {{ total | currency }}</h3>
+        <button (click)="pagarPedido()">Pagar</button>
+    </div>
+</div>

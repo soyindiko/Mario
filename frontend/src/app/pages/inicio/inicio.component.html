@@ -1,0 +1,26 @@
+
+<div class="titulo_categoria">
+    <h2>estrenos</h2> 
+    <img alt="Listado de películas estrenadas ordenadas alfabéticamente" src="assets/icons/sort_by_alphabet.svg">
+</div>
+
+<div class="listado_peliculas" #listadoPeliculas>
+    @for(pelicula of (peliculas | filterBy: 'estrenada': 1) | slice: 0:7; track pelicula.id; ) {
+        <app-pelicula [pelicula]="pelicula"></app-pelicula>
+    }    
+
+    <a [routerLink]="['/peliculas/1']"><button class="boton_listado_completo"><img src="assets/icons/add.svg"></button></a>
+</div>
+
+<div class="titulo_categoria">
+    <h2>próximamente </h2>
+<img alt="Listado de próximos estrenos ordenadas alfabéticamente" src="assets/icons/sort_by_alphabet.svg">
+</div>
+
+<div class="listado_peliculas" #listadoPeliculasProximas>
+    @for(pelicula of (peliculas | filterBy: 'estrenada': 0) | slice: 0:7; track pelicula.id; ) {
+        <app-pelicula [pelicula]="pelicula"></app-pelicula>
+    }   
+    
+    <a [routerLink]="['/peliculas/0']"><button class="boton_listado_completo"><img src="assets/icons/add.svg"></button></a>
+</div>

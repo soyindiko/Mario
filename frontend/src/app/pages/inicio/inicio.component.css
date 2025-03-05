@@ -1,0 +1,78 @@
+.titulo_categoria {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+h2 {
+    margin: 0;
+}
+
+img {
+    margin-left: 1em;
+}
+
+.listado_peliculas {
+    position: relative;
+    display: flex;
+    align-items: center; /* Asegura que el botón se alinee con el contenido */
+    overflow-x: scroll;
+    scrollbar-width: none;
+    user-select: none; /* Evita la selección de texto */
+    -webkit-user-select: none; /* Para navegadores basados en WebKit */
+    -moz-user-select: none;
+    -ms-user-select: none;
+    cursor: grab; /* Muestra el cursor de "agarre" */
+}
+
+.listado_peliculas img {
+    pointer-events: none;
+}
+
+.listado_peliculas::-webkit-scrollbar {
+    display: none;
+}
+
+
+.listado_peliculas app-pelicula {
+    margin-right: 16px;
+    padding: 10px;
+}
+
+
+
+.listado_peliculas:active {
+    cursor: grabbing; /* Cambia el cursor mientras se arrastra */
+}
+
+.boton_listado_completo {
+    margin-right: 10px;
+    flex-shrink: 0; /* Evita que el botón cambie de tamaño al hacer scroll */
+    width: 200px;
+    height: 200px;
+    background-color: #ff6600;
+    border: none;
+    border-radius: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.boton_listado_completo:hover {
+    background-color: #ff4500;
+    transform: scale(1.1);
+}
+
+.boton_listado_completo img {
+    margin: 0;
+    width: 50px;
+    height: auto;
+}

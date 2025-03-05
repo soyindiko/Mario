@@ -1,0 +1,65 @@
+.tarjeta {
+    position: relative; /* Asegura que los elementos dentro de la tarjeta se posicionen correctamente */
+    width: 350px;  /* Ajusta el tamaño de la tarjeta según sea necesario */
+    height: 450px; /* Ajusta el tamaño de la tarjeta según sea necesario */
+    overflow: hidden; /* Oculta el contenido desbordado */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+    transition: transform 0.3s ease; /* Animación suave para el hover */
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra toda el área de la tarjeta */
+}
+
+.tarjeta:hover {
+    transform: scale(1.02); /* Efecto de zoom suave al pasar el ratón */
+}
+
+.tarjeta .info {
+    position: absolute;
+    bottom: 0; /* Coloca el contenido en la parte inferior de la tarjeta */
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0; /* El contenido está oculto por defecto */
+    visibility: hidden; /* Asegura que el contenido no sea interactuable antes de que se muestre */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Animación suave para el hover */
+}
+
+.tarjeta:hover .info {
+    opacity: 1; /* Muestra el contenido cuando se hace hover */
+    visibility: visible; /* Hace visible el contenido */
+}
+
+.tarjeta .info p {
+    margin: 0; /* Elimina el margen del párrafo */
+    text-overflow: ellipsis; /* Añade "..." al final del texto si es demasiado largo */
+    overflow: hidden; /* Oculta el contenido desbordado */
+    white-space: nowrap; /* Asegura que el texto se mantenga en una sola línea */
+    width: 100%; /* Asegura que el párrafo no se desborde fuera del contenedor */
+    text-align: center; /* Centra el texto */
+}
+
+.tarjeta .info button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #ff9900; /* Color de fondo del botón */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.tarjeta .info button:hover {
+    background-color: #e68900; /* Color de fondo del botón al hacer hover */
+}
